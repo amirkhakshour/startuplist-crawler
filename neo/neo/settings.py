@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+import os
 # Scrapy settings for neo project
 #
 # For simplicity, this file contains only settings considered important or
@@ -89,3 +89,21 @@ DOWNLOAD_DELAY = 0.5
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+ITEM_PIPELINES = {
+   'neo.pipelines.RabbitMQItemPublisherPipeline': 300,
+}
+
+RABBITMQ_HOST = os.environ.get('RABBITMQ_HOST', 'localhost')
+RABBITMQ_PORT = os.environ.get('RABBITMQ_PORT', 55672)
+RABBITMQ_USER = os.environ.get('RABBITMQ_USER', 'admin')
+RABBITMQ_PASSWORD = os.environ.get('RABBITMQ_PASSWORD', 'doogh')
+RABBITMQ_VIRTUAL_HOST = os.environ.get('RABBITMQ_VIRTUAL_HOST', '3meg')
+RABBITMQ_EXCHANGE = os.environ.get('RABBITMQ_EXCHANGE', 'scrapy')
+RABBITMQ_QUEUE = os.environ.get('RABBITMQ_QUEUE', 'item')
+RABBITMQ_ROUTING_KEY = os.environ.get('RABBITMQ_ROUTING_KEY', 'item')
+
+STARTUP_DATA_TYPE_EMAIL = 'E'
+STARTUP_DATA_TYPE_PEOPLE = 'P'
+STARTUP_DATA_TYPE_PHONE = 'H'
+STARTUP_DATA_TYPE_MISC = 'M'

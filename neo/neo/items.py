@@ -10,5 +10,9 @@ import scrapy
 
 class NeoItem(scrapy.Item):
     # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    name = scrapy.Field()
+    source_url = scrapy.Field()
+    website = scrapy.Field()
+    pitch = scrapy.Field()
+    description = scrapy.Field()
+    images = scrapy.Field()
