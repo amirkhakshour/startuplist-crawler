@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import scrapy
-from neo.items import NeoItem
+from neo.items import StartupItem, StartupDataItem
 
 
 class BetalistSpider(scrapy.Spider):
@@ -56,7 +56,11 @@ class BetalistSpider(scrapy.Spider):
         startup_srcs = response.xpath('//a[@class="carousel__item"]/img/@src').extract()
         startup_visit_url = response.xpath("//a[contains(text(),'%s')]/@href" % 'Visit Site').get()
 
-        data = []
+        tags = response.xpath('//div[@class="markets"]/descendant::a[@class="tag"]/text()').extract()
+        data = [{
+            'data_type': self.settings.get('STARTUP_DATA_TYPE_TAGS'),
+            'data': tags,
+        }]
         for maker in response.xpath('//div[@class="maker"]'):
             maker_role = maker.xpath('./descendant::a[@class="maker__role"]/text()').get()
             maker_base = maker.xpath('./descendant::a[@class="maker__name"]')
@@ -89,6 +93,9 @@ class BetalistSpider(scrapy.Spider):
     def extract_startup_url(self, response):
         itrem_data = response.meta['item_data']
         itrem_data.update({
-            'website': response.url
+            'model': 'Startup',
+            'website': response.url,
         })
-        yield NeoItem(**itrem_data)
+        yield StartupItem(**itrem_data)
+
+        # start parsing other data

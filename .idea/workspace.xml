@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="05730736-5f5a-4e51-8efe-f575332f9f07" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/neo/neo/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/neo/neo/items.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/neo/neo/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/neo/neo/pipelines.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/neo/neo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/neo/neo/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/neo/neo/spiders/betalist.py" beforeDir="false" afterPath="$PROJECT_DIR$/neo/neo/spiders/betalist.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/neo/neo/spiders/betalist.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="67" column="25" lean-forward="true" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
+            <state relative-caret-position="286">
+              <caret line="61" column="14" selection-start-line="61" selection-start-column="14" selection-end-line="61" selection-end-column="14" />
               <folding>
                 <element signature="e#24#37#0" expanded="true" />
               </folding>
@@ -28,8 +30,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/neo/neo/pipelines.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="38" column="33" lean-forward="true" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="33" />
+            <state relative-caret-position="342">
+              <caret line="56" column="22" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="22" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -38,10 +40,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../lurak/core/conf/celery.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="173">
+              <caret line="29" column="60" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="60" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/neo/neo/items.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+            <state relative-caret-position="183">
+              <caret line="10" column="17" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -49,8 +63,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/neo/neo/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="106" column="24" selection-start-line="106" selection-end-line="106" selection-end-column="24" />
+            <state relative-caret-position="364">
+              <caret line="109" column="22" selection-start-line="109" selection-end-line="109" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -64,13 +78,14 @@
       <find>extra</find>
       <find>region_url</find>
       <find>deferToThread</find>
-      <find>storage</find>
       <find>Received and deleted unknown message.</find>
       <find>TalentEducationInlineAdmin</find>
       <find>dispatcher</find>
       <find>print</find>
-      <find>ITEM_PIPELINES</find>
       <find>settings</find>
+      <find>parse_amqp_flight_message</find>
+      <find>storage</find>
+      <find>ITEM_PIPELINES</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -79,9 +94,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/neo/neo/items.py" />
         <option value="$PROJECT_DIR$/neo/neo/pipelines.py" />
         <option value="$PROJECT_DIR$/neo/neo/settings.py" />
-        <option value="$PROJECT_DIR$/neo/neo/items.py" />
         <option value="$PROJECT_DIR$/neo/neo/spiders/betalist.py" />
       </list>
     </option>
@@ -132,7 +147,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../hirequ/core/hirequ/apps/tb/apps/talent/admin.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../lurak/core/conf/__init__.py" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -159,12 +174,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1583606136300</updated>
-      <workItem from="1583606146034" duration="12969000" />
+      <workItem from="1583606146034" duration="16231000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12969000" />
+    <option name="totallyTimeSpent" value="16231000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
@@ -217,24 +232,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/neo/neo/settings.py">
+    <entry file="file://$PROJECT_DIR$/../../../lurak/core/conf/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../lurak/core/apps/ticket/tasks.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="106" column="24" selection-start-line="106" selection-end-line="106" selection-end-column="24" />
+        <state relative-caret-position="381">
+          <caret line="39" column="36" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../lurak/core/conf/celery.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="29" column="60" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/neo/neo/items.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+        <state relative-caret-position="183">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neo/neo/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="109" column="22" selection-start-line="109" selection-end-line="109" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/neo/neo/pipelines.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="38" column="33" lean-forward="true" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="33" />
+        <state relative-caret-position="342">
+          <caret line="56" column="22" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="22" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
@@ -243,8 +281,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/neo/neo/spiders/betalist.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="67" column="25" lean-forward="true" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
+        <state relative-caret-position="286">
+          <caret line="61" column="14" selection-start-line="61" selection-start-column="14" selection-end-line="61" selection-end-column="14" />
           <folding>
             <element signature="e#24#37#0" expanded="true" />
           </folding>

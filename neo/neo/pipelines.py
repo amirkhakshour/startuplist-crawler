@@ -54,5 +54,8 @@ class RabbitMQItemPublisherPipeline(object):
             exchange=self.exchange,
             routing_key=self.routing_key,
             body=data,
+            properties=pika.BasicProperties(
+                headers={'model': item.get('model', None)}
+            ),
         )
         return item
