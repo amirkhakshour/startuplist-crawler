@@ -16,3 +16,4 @@ class NeoItem(scrapy.Item):
     pitch = scrapy.Field()
     description = scrapy.Field()
     images = scrapy.Field()
+    data = scrapy.Field()

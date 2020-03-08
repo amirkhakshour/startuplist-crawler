@@ -9,7 +9,6 @@ class BetalistSpider(scrapy.Spider):
 
     def __init__(self, **kwargs):
         super(BetalistSpider, self).__init__(**kwargs)
-        self.storage = {}
 
     def parse(self, response):
         for region in response.xpath("//a[contains(@class, 'tag--card')]"):
@@ -58,13 +57,13 @@ class BetalistSpider(scrapy.Spider):
         startup_visit_url = response.xpath("//a[contains(text(),'%s')]/@href" % 'Visit Site').get()
 
         data = []
-        for maker in response.xpath('/a[@class="maker"]'):
+        for maker in response.xpath('//div[@class="maker"]'):
             maker_role = maker.xpath('./descendant::a[@class="maker__role"]/text()').get()
             maker_base = maker.xpath('./descendant::a[@class="maker__name"]')
             maker_twitter_url = maker_base.xpath('./@href').get()
             maker_name = maker_base.xpath('./text()').get()
             data.append({
-                'data_type': scrapy.settings.get('STARTUP_DATA_TYPE_PEOPLE'),
+                'data_type': self.settings.get('STARTUP_DATA_TYPE_PEOPLE'),
                 'data': {
                     'name': maker_name,
                     'role': maker_role,
