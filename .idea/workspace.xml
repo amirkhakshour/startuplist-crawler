@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="05730736-5f5a-4e51-8efe-f575332f9f07" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/neo/neo/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/neo/neo/items.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/neo/neo/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/neo/neo/pipelines.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/neo/neo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/neo/neo/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/neo/neo/spiders/betalist.py" beforeDir="false" afterPath="$PROJECT_DIR$/neo/neo/spiders/betalist.py" afterDir="false" />
@@ -18,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/neo/neo/spiders/betalist.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="61" column="14" selection-start-line="61" selection-start-column="14" selection-end-line="61" selection-end-column="14" />
+            <state relative-caret-position="52">
+              <caret line="149" column="47" lean-forward="true" selection-start-line="149" selection-start-column="47" selection-end-line="149" selection-end-column="47" />
               <folding>
                 <element signature="e#24#37#0" expanded="true" />
               </folding>
@@ -30,8 +30,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/neo/neo/pipelines.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="56" column="22" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="22" />
+            <state relative-caret-position="238">
+              <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -40,22 +40,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../lurak/core/conf/celery.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="29" column="60" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="60" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/neo/neo/items.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="10" column="17" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="17" />
+            <state relative-caret-position="469">
+              <caret line="21" column="21" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -63,8 +51,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/neo/neo/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="109" column="22" selection-start-line="109" selection-end-line="109" selection-end-column="22" />
+            <state relative-caret-position="64">
+              <caret line="100" column="12" selection-start-line="100" selection-start-column="12" selection-end-line="100" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -83,8 +71,16 @@
       <find>dispatcher</find>
       <find>print</find>
       <find>settings</find>
-      <find>parse_amqp_flight_message</find>
       <find>storage</find>
+      <find>parse_amqp_flight_message</find>
+      <find>source_url</find>
+      <find>start_urls</find>
+      <find>regio</find>
+      <find>get_emails</find>
+      <find>return</find>
+      <find>break</find>
+      <find>RabbitMQItemPublisherPipeline</find>
+      <find>exchange</find>
       <find>ITEM_PIPELINES</find>
     </findStrings>
   </component>
@@ -95,9 +91,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/neo/neo/items.py" />
+        <option value="$PROJECT_DIR$/neo/neo/spiders/betalist.py" />
         <option value="$PROJECT_DIR$/neo/neo/pipelines.py" />
         <option value="$PROJECT_DIR$/neo/neo/settings.py" />
-        <option value="$PROJECT_DIR$/neo/neo/spiders/betalist.py" />
       </list>
     </option>
   </component>
@@ -174,12 +170,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1583606136300</updated>
-      <workItem from="1583606146034" duration="16231000" />
+      <workItem from="1583606146034" duration="25573000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16231000" />
+    <option name="totallyTimeSpent" value="25573000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
@@ -187,7 +183,7 @@
     <layout>
       <window_info id="DB Browser" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="DB Execution Console" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
@@ -197,7 +193,7 @@
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3294702" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -210,6 +206,32 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info id="DB Browser" order="1" />
+      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.25" />
+      <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="DB Execution Console" order="0" />
+      <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="2" />
+      <window_info anchor="bottom" id="Terminal" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="5" />
+      <window_info anchor="bottom" id="Python Console" order="6" />
+      <window_info anchor="bottom" id="Message" order="7" />
+      <window_info anchor="bottom" id="Find" order="8" weight="0.3294702" />
+      <window_info anchor="bottom" id="Run" order="9" />
+      <window_info anchor="bottom" id="Debug" order="10" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="13" />
+      <window_info anchor="right" id="make" order="0" />
+      <window_info anchor="right" id="SciView" order="1" />
+      <window_info anchor="right" id="Database" order="2" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="3" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="4" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="5" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -257,32 +279,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/neo/neo/items.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/neo/neo/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="109" column="22" selection-start-line="109" selection-end-line="109" selection-end-column="22" />
+        <state relative-caret-position="469">
+          <caret line="21" column="21" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/neo/neo/pipelines.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="56" column="22" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="22" />
+        <state relative-caret-position="238">
+          <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/neo/neo/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="100" column="12" selection-start-line="100" selection-start-column="12" selection-end-line="100" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/neo/neo/spiders/betalist.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="61" column="14" selection-start-line="61" selection-start-column="14" selection-end-line="61" selection-end-column="14" />
+        <state relative-caret-position="52">
+          <caret line="149" column="47" lean-forward="true" selection-start-line="149" selection-start-column="47" selection-end-line="149" selection-end-column="47" />
           <folding>
             <element signature="e#24#37#0" expanded="true" />
           </folding>

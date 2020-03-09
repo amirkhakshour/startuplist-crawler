@@ -2,28 +2,12 @@
 import re
 import scrapy
 from neo.items import StartupItem, StartupDataItem
-
-email_regex = re.compile((r"([a-z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+\/=?^_`"
-                          "{|}~-]+)*(@|\sat\s)(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?(\.|"
-                          "\sdot\s))+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)"))
-INNER_PAGES_ULR = {
-    'contact',
-    'contact-us',
-    'contactus',
-    'about',
-    'about-us',
-    'impressum',
-    'imprint',
-    'privacy',
-}
+from neo.utils import email_regex, INNER_PAGES_ULR
 
 
-class BetalistSpider(scrapy.Spider):
-    name = 'betalist'
-    start_urls = ['https://betalist.com/regions/']
-
-    def __init__(self, **kwargs):
-        super(BetalistSpider, self).__init__(**kwargs)
+class StartupListSpider(scrapy.Spider):
+    name = 'startuplist'
+    start_urls = ['https://startups-list.com/']
 
     def get_emails_from_response(self, response):
         text = response.body.decode('utf-8')
