@@ -138,7 +138,7 @@ class BetalistSpider(scrapy.Spider):
         if not emails_found:
             # if we found no emails start parsing other pages
             item_data = {  # Remove unnecessary data
-                'source_url': item_data['source_url'],
+                'website': item_data['website'],
             }
             for page in INNER_PAGES_ULR:
                 yield scrapy.Request(

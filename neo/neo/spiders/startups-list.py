@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import re
 import scrapy
-from neo.items import StartupItem, StartupDataItem
+from neo.items import StartupItem, StartupDataItem, StartupImage
 from neo.utils import email_regex, INNER_PAGES_ULR
 
 
@@ -18,97 +18,71 @@ class StartupListSpider(scrapy.Spider):
                     if not (email[0].startswith('//') or '/' in email[0])])
 
     def parse(self, response):
-        for region in response.xpath("//a[contains(@class, 'tag--card')]"):
-            region_url = response.urljoin(region.xpath('./@href').get())
-            region_text = region.xpath('./text()').get().strip().lower()
-            if region_text != 'germany':
-                yield scrapy.Request(
-                    url=region_url,
-                    callback=self.extract_region_page,
-                    meta={'region': region_text, 'pager': 1, 'region_url': region_url}
-                )
-
-    def extract_region_page(self, response):
-        startup_cards = response.xpath("//div[contains(@class, 'startupCard')]")
-        if not startup_cards:  # check if no card, break pager
-            return
-
-        pager = int(response.meta['pager'])
-        region_url = response.meta['region_url']
-        next_page = pager + 1
-        # crawl next page
-        next_page_meta = dict(response.meta)
-        next_page_meta['pager'] = next_page
-        yield scrapy.Request(
-            url=region_url + '/?page=%d' % next_page,
-            callback=self.extract_region_page,
-            meta=next_page_meta
-        )
-
-        for startup_link in response.xpath("//a[contains(@class, 'startupCard__visual')]/@href"):
+        for city in response.xpath("//a[contains(@class, 'citylink')]"):
+            city_url = response.urljoin(city.xpath('./@href').get())
+            city_text = city.xpath('./h3/text()').get().strip().lower()
             yield scrapy.Request(
-                url=response.urljoin(startup_link.get()),
-                callback=self.extract_startup_page,
-                meta=response.meta
+                url=city_url,
+                callback=self.extract_city_page,
+                meta={'city': city_text}
+            )
+        # Beta locations
+        for city in response.xpath("//h2[contains(text(),'%s')]/following::a[contains(@class, 'label')]" % 'Beta Locations'):
+            city_url = response.urljoin(city.xpath('./@href').get())
+            city_text = city.xpath('./text()').get().strip().lower()
+            yield scrapy.Request(
+                url=city_url,
+                callback=self.extract_city_page,
+                meta={'city': city_text}
             )
 
-    def extract_startup_page(self, response):
-        startup_name = response.xpath(
-            "//h1[contains(@class, 'startup__summary__name')]/text()"
-        ).get()
-        startup_pitch = response.xpath('//h2[@class="startup__summary__pitch"]/text()').get()
-        startup_description = response.xpath('//div[@class="startup__description"]').get()
-        startup_srcs = response.xpath('//a[@class="carousel__item"]/img/@src').extract()
-        startup_visit_url = response.xpath("//a[contains(text(),'%s')]/@href" % 'Visit Site').get()
-
-        # add tags
-        tags = response.xpath('//div[@class="markets"]/descendant::a[@class="tag"]/text()').extract()
-        data = [{
-            'data_type': self.settings.get('STARTUP_DATA_TYPE_TAGS'),
-            'data': tags,
-        }]
-
-        # add region data from metadata
-        region = response.meta['region']
-        data.append({
-            'data_type': self.settings.get('STARTUP_DATA_TYPE_REGION'),
-            'data': region,
-        })
-
-        for maker in response.xpath('//div[@class="maker"]'):
-            maker_role = maker.xpath('./descendant::a[@class="maker__role"]/text()').get()
-            maker_base = maker.xpath('./descendant::a[@class="maker__name"]')
-            maker_twitter_url = maker_base.xpath('./@href').get()
-            maker_name = maker_base.xpath('./text()').get()
+    def extract_city_page(self, response):
+        startup_cards = response.xpath('//div[contains(concat(" ", @class, " "), " card startup ")]')
+        if not startup_cards:  # check if no card, break pager
+            return
+        for startup_link in startup_cards:
+            main_link = startup_link.xpath('./a[@class="main_link"]')
+            website = main_link.xpath('./@href').get()
+            startup_name = main_link.xpath(
+                './descendant::h1/text()'
+            ).get().replace('/n', '')
+            startup_description = startup_link.xpath('./descendant::p').get()
+            startup_pitch = startup_link.xpath('./descendant::p/strong/text()').get()
+            startup_logo = startup_link.xpath('./descendant::img[@property="image"]/@data-src').get()
+            tags = startup_link.xpath('./descendant::img/@alt').get().split()
+            tags = [item.lower().strip() for item in tags]
+            # add tags
+            data = [{
+                'data_type': self.settings.get('STARTUP_DATA_TYPE_TAGS'),
+                'data': tags,
+            }]
+            city = response.meta['city']
             data.append({
-                'data_type': self.settings.get('STARTUP_DATA_TYPE_PEOPLE'),
-                'data': {
-                    'name': maker_name,
-                    'role': maker_role,
-                    'twitter': maker_twitter_url,
-                }
+                'data_type': self.settings.get('STARTUP_DATA_TYPE_CITY'),
+                'data': city,
             })
 
-        # the visit page is redirected to the main startup page
-        item_data = {
-            'name': startup_name,
-            'source_url': response.urljoin(response.url),
-            'pitch': startup_pitch,
-            'description': startup_description,
-            'images': startup_srcs,
-            'data': data,
-        }
-        yield scrapy.Request(
-            url=response.urljoin(startup_visit_url),
-            callback=self.extract_startup_url,
-            meta={'item_data': item_data}
-        )
+            # the visit page is redirected to the main startup page
+            item_data = {
+                'name': startup_name,
+                'website': website,
+                'source_url': response.urljoin(response.url),
+                'pitch': startup_pitch or '',
+                'description': startup_description,
+                'data': data,
+            }
+            print('#' * 100)
+            print(item_data)
+            # yield scrapy.Request(
+            #     url=response.urljoin(website),
+            #     callback=self.extract_startup_url,
+            #     meta={'item_data': item_data, 'logo': startup_logo}
+            # )
 
     def extract_startup_url(self, response):
         item_data = response.meta['item_data']
         item_data.update({
             'model': 'Startup',
-            'website': response.url,
         })
         emails_found = self.get_emails_from_response(response)
         if emails_found:
@@ -118,11 +92,18 @@ class StartupListSpider(scrapy.Spider):
                     'emails': emails_found,
                 }
             })
+        # send in any case
         yield StartupItem(**item_data)
+        yield StartupImage(**{
+            'model': 'StartupImage',
+            'website': item_data['website'],
+            'images': [response.meta['logo'], ]
+        })
+
         if not emails_found:
             # if we found no emails start parsing other pages
             item_data = {  # Remove unnecessary data
-                'source_url': item_data['source_url'],
+                'website': item_data['website'],
             }
             for page in INNER_PAGES_ULR:
                 yield scrapy.Request(
@@ -136,7 +117,7 @@ class StartupListSpider(scrapy.Spider):
         emails_found = self.get_emails_from_response(response)
         if emails_found:
             item_data['data'] = {
-                'model': 'StartupDataItem',
+                'model': 'StartupData',
                 'data_type': self.settings.get('STARTUP_DATA_TYPE_EMAIL'),
                 'data': {
                     'emails': emails_found,

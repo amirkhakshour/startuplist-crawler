@@ -21,6 +21,12 @@ class StartupItem(scrapy.Item):
 
 class StartupDataItem(scrapy.Item):
     model = scrapy.Field()
-    source_url = scrapy.Field()
+    website = scrapy.Field()
     type = scrapy.Field()
     data = scrapy.Field()
+
+
+class StartupImage(scrapy.Item):
+    model = scrapy.Field()
+    website = scrapy.Field()
+    images = scrapy.Field()
