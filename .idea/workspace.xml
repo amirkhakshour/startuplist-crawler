@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="05730736-5f5a-4e51-8efe-f575332f9f07" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/neo/neo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/neo/neo/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/neo/neo/spiders/startupranking.py" beforeDir="false" afterPath="$PROJECT_DIR$/neo/neo/spiders/startupranking.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/neo/neo/spiders/startups-list.py" beforeDir="false" afterPath="$PROJECT_DIR$/neo/neo/spiders/startups-list.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,12 +15,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/neo/neo/spiders/betalist.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="21" column="20" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="20" />
+            <state relative-caret-position="126">
+              <caret line="57" selection-start-line="57" selection-end-line="61" selection-end-column="9" />
               <folding>
                 <element signature="e#24#33#0" expanded="true" />
               </folding>
@@ -28,8 +31,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/neo/neo/spiders/startups-list.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="41" selection-start-line="41" selection-end-line="41" />
+            <state relative-caret-position="338">
+              <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
               <folding>
                 <element signature="e#24#33#0" expanded="true" />
               </folding>
@@ -37,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/neo/neo/spiders/startupranking.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+            <state relative-caret-position="806">
+              <caret line="57" column="1" selection-start-line="57" selection-start-column="1" selection-end-line="61" selection-end-column="13" />
               <folding>
                 <element signature="e#24#33#0" expanded="true" />
               </folding>
@@ -54,12 +57,12 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="364">
-                <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+                <caret line="14" selection-start-line="14" selection-end-line="15" />
               </first_editor>
               <second_editor />
             </state>
@@ -78,8 +81,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/neo/neo/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1768">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="416">
+              <caret line="56" column="1" lean-forward="true" selection-start-line="56" selection-start-column="1" selection-end-line="56" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -88,17 +91,11 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>storage</find>
-      <find>parse_amqp_flight_message</find>
-      <find>source_url</find>
-      <find>start_urls</find>
-      <find>regio</find>
       <find>get_emails</find>
       <find>return</find>
       <find>RabbitMQItemPublisherPipeline</find>
       <find>exchange</find>
       <find>text</find>
-      <find>break</find>
       <find>region</find>
       <find>startup_name</find>
       <find>ITEM_PIPELINES</find>
@@ -107,17 +104,23 @@
       <find>image</find>
       <find>id=</find>
       <find>startup_logo</find>
-      <find>extract_data_from_page</find>
       <find>item_data</find>
       <find>people</find>
       <find>contains</find>
       <find>follow</find>
       <find>follo</find>
       <find>countr</find>
-      <find>print</find>
       <find>get_base_url</find>
       <find>STARTUP_DATA_TYPE_CITY</find>
       <find>ance</find>
+      <find>DOWNLOADER_MIDDLEWARES</find>
+      <find>extract_data_from_page</find>
+      <find>delay</find>
+      <find>print</find>
+      <find>break</find>
+      <find>extract_startup_ref_page</find>
+      <find>pager</find>
+      <find>website</find>
     </findStrings>
     <replaceStrings>
       <replace>city</replace>
@@ -134,10 +137,10 @@
         <option value="$PROJECT_DIR$/tmp.html" />
         <option value="$PROJECT_DIR$/neo/neo/items.py" />
         <option value="$PROJECT_DIR$/neo/neo/spiders/betalist.py" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/neo/neo/settings.py" />
         <option value="$PROJECT_DIR$/neo/neo/spiders/startups-list.py" />
         <option value="$PROJECT_DIR$/neo/neo/spiders/startupranking.py" />
-        <option value="$PROJECT_DIR$/neo/neo/settings.py" />
-        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -151,38 +154,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="neo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="neo" type="462c0819:PsiDirectoryNode" />
-              <item name="neo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="neo" type="462c0819:PsiDirectoryNode" />
-              <item name="neo" type="462c0819:PsiDirectoryNode" />
-              <item name="spiders" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -215,11 +187,12 @@
       <option name="presentableId" value="Default" />
       <updated>1583606136300</updated>
       <workItem from="1583606146034" duration="25573000" />
+      <workItem from="1584027631058" duration="7950000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44216000" />
+    <option name="totallyTimeSpent" value="53897000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
@@ -331,181 +304,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tmp.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-          <folding>
-            <element signature="e#226#279#0" expanded="true" />
-            <element signature="e#10690#10743#0" expanded="true" />
-            <element signature="e#13628#13633#0" expanded="true" />
-            <element signature="e#13984#13989#0" expanded="true" />
-            <element signature="e#15050#15055#0" expanded="true" />
-            <element signature="e#82033#82038#0" expanded="true" />
-            <element signature="e#96551#96556#0" expanded="true" />
-            <element signature="e#108209#108214#0" expanded="true" />
-            <element signature="e#123543#123548#0" expanded="true" />
-            <element signature="e#145280#145285#0" expanded="true" />
-            <element signature="e#155485#155490#0" expanded="true" />
-            <element signature="e#158677#158682#0" expanded="true" />
-            <element signature="e#170753#170758#0" expanded="true" />
-            <element signature="e#170821#170826#0" expanded="true" />
-            <element signature="e#170843#170848#0" expanded="true" />
-            <element signature="e#178686#178691#0" expanded="true" />
-            <element signature="e#189213#189218#0" expanded="true" />
-            <element signature="e#201563#201568#0" expanded="true" />
-            <element signature="e#212057#212062#0" expanded="true" />
-            <element signature="e#220507#220512#0" expanded="true" />
-            <element signature="e#232414#232419#0" expanded="true" />
-            <element signature="e#232499#232504#0" expanded="true" />
-            <element signature="e#232594#232599#0" expanded="true" />
-            <element signature="e#234149#234154#0" expanded="true" />
-            <element signature="e#241280#241285#0" expanded="true" />
-            <element signature="e#248802#248807#0" expanded="true" />
-            <element signature="e#255686#255691#0" expanded="true" />
-            <element signature="e#259111#259116#0" expanded="true" />
-            <element signature="e#319631#319636#0" expanded="true" />
-            <element signature="e#326301#326306#0" expanded="true" />
-            <element signature="e#326504#326509#0" expanded="true" />
-            <element signature="e#331588#331593#0" expanded="true" />
-            <element signature="e#343670#343675#0" expanded="true" />
-            <element signature="e#343747#343752#0" expanded="true" />
-            <element signature="e#351452#351457#0" expanded="true" />
-            <element signature="e#378187#378192#0" expanded="true" />
-            <element signature="e#379864#379869#0" expanded="true" />
-            <element signature="e#400487#400492#0" expanded="true" />
-            <element signature="e#400605#400610#0" expanded="true" />
-            <element signature="e#409561#409566#0" expanded="true" />
-            <element signature="e#426486#426491#0" expanded="true" />
-            <element signature="e#429919#429924#0" expanded="true" />
-            <element signature="e#430320#430325#0" expanded="true" />
-            <element signature="e#433888#433893#0" expanded="true" />
-            <element signature="e#438989#438994#0" expanded="true" />
-            <element signature="e#445570#445575#0" expanded="true" />
-            <element signature="e#445724#445729#0" expanded="true" />
-            <element signature="e#466867#466872#0" expanded="true" />
-            <element signature="e#492595#492600#0" expanded="true" />
-            <element signature="e#492832#492837#0" expanded="true" />
-            <element signature="e#496020#496025#0" expanded="true" />
-            <element signature="e#502938#502943#0" expanded="true" />
-            <element signature="e#514572#514577#0" expanded="true" />
-            <element signature="e#527847#527852#0" expanded="true" />
-            <element signature="e#587284#587289#0" expanded="true" />
-            <element signature="e#587325#587330#0" expanded="true" />
-            <element signature="e#587396#587401#0" expanded="true" />
-            <element signature="e#594181#594186#0" expanded="true" />
-            <element signature="e#644846#644851#0" expanded="true" />
-            <element signature="e#648239#648244#0" expanded="true" />
-            <element signature="e#670072#670077#0" expanded="true" />
-            <element signature="e#670162#670167#0" expanded="true" />
-            <element signature="e#670219#670224#0" expanded="true" />
-            <element signature="e#671744#671749#0" expanded="true" />
-            <element signature="e#675086#675091#0" expanded="true" />
-            <element signature="e#682209#682214#0" expanded="true" />
-            <element signature="e#710969#710974#0" expanded="true" />
-            <element signature="e#741479#741484#0" expanded="true" />
-            <element signature="e#751146#751151#0" expanded="true" />
-            <element signature="e#775684#775689#0" expanded="true" />
-            <element signature="e#776111#776116#0" expanded="true" />
-            <element signature="e#776230#776235#0" expanded="true" />
-            <element signature="e#799154#799159#0" expanded="true" />
-            <element signature="e#800875#800880#0" expanded="true" />
-            <element signature="e#800911#800916#0" expanded="true" />
-            <element signature="e#804329#804334#0" expanded="true" />
-            <element signature="e#809102#809107#0" expanded="true" />
-            <element signature="e#842094#842099#0" expanded="true" />
-            <element signature="e#861313#861318#0" expanded="true" />
-            <element signature="e#861438#861443#0" expanded="true" />
-            <element signature="e#912692#912697#0" expanded="true" />
-            <element signature="e#917105#917110#0" expanded="true" />
-            <element signature="e#927470#927475#0" expanded="true" />
-            <element signature="e#936443#936448#0" expanded="true" />
-            <element signature="e#949970#949975#0" expanded="true" />
-            <element signature="e#951744#951749#0" expanded="true" />
-            <element signature="e#951763#951768#0" expanded="true" />
-            <element signature="e#951821#951826#0" expanded="true" />
-            <element signature="e#967828#967833#0" expanded="true" />
-            <element signature="e#969612#969617#0" expanded="true" />
-            <element signature="e#977097#977102#0" expanded="true" />
-            <element signature="e#983328#983333#0" expanded="true" />
-            <element signature="e#991271#991276#0" expanded="true" />
-            <element signature="e#1008917#1008922#0" expanded="true" />
-            <element signature="e#1057802#1057807#0" expanded="true" />
-            <element signature="e#1057971#1057976#0" expanded="true" />
-            <element signature="e#1064730#1064735#0" expanded="true" />
-            <element signature="e#1077242#1077247#0" expanded="true" />
-            <element signature="e#1080686#1080691#0" expanded="true" />
-            <element signature="e#1084240#1084245#0" expanded="true" />
-            <element signature="e#1111183#1111188#0" expanded="true" />
-            <element signature="e#1111493#1111498#0" expanded="true" />
-            <element signature="e#1111558#1111563#0" expanded="true" />
-            <element signature="e#1118039#1118044#0" expanded="true" />
-            <element signature="e#1136657#1136662#0" expanded="true" />
-            <element signature="e#1196139#1196144#0" expanded="true" />
-            <element signature="e#1199382#1199387#0" expanded="true" />
-            <element signature="e#1202095#1202100#0" expanded="true" />
-            <element signature="e#1202140#1202145#0" expanded="true" />
-            <element signature="e#1253573#1253578#0" expanded="true" />
-            <element signature="e#1285326#1285331#0" expanded="true" />
-            <element signature="e#1287315#1287320#0" expanded="true" />
-            <element signature="e#1298114#1298119#0" expanded="true" />
-            <element signature="e#1299596#1299601#0" expanded="true" />
-            <element signature="e#1308382#1308387#0" expanded="true" />
-            <element signature="e#1334596#1334601#0" expanded="true" />
-            <element signature="e#1347074#1347079#0" expanded="true" />
-            <element signature="e#1365449#1365454#0" expanded="true" />
-            <element signature="e#1380745#1380750#0" expanded="true" />
-            <element signature="e#1380782#1380787#0" expanded="true" />
-            <element signature="e#1380823#1380828#0" expanded="true" />
-            <element signature="e#1380841#1380846#0" expanded="true" />
-            <element signature="e#1407699#1407704#0" expanded="true" />
-            <element signature="e#1430229#1430234#0" expanded="true" />
-            <element signature="e#1430540#1430545#0" expanded="true" />
-            <element signature="e#1430597#1430602#0" expanded="true" />
-            <element signature="e#1430683#1430688#0" expanded="true" />
-            <element signature="e#1440983#1440988#0" expanded="true" />
-            <element signature="e#1441360#1441365#0" expanded="true" />
-            <element signature="e#1454960#1454965#0" expanded="true" />
-            <element signature="e#1468999#1469004#0" expanded="true" />
-            <element signature="e#1476285#1476290#0" expanded="true" />
-            <element signature="e#1492142#1492147#0" expanded="true" />
-            <element signature="e#1492478#1492483#0" expanded="true" />
-            <element signature="e#1517391#1517396#0" expanded="true" />
-            <element signature="e#1517609#1517614#0" expanded="true" />
-            <element signature="e#1517638#1517643#0" expanded="true" />
-            <element signature="e#1526181#1526186#0" expanded="true" />
-            <element signature="e#1527618#1527623#0" expanded="true" />
-            <element signature="e#1553516#1553521#0" expanded="true" />
-            <element signature="e#1560272#1560277#0" expanded="true" />
-            <element signature="e#1569235#1569240#0" expanded="true" />
-            <element signature="e#1577065#1577070#0" expanded="true" />
-            <element signature="e#1604053#1604058#0" expanded="true" />
-            <element signature="e#1614645#1614650#0" expanded="true" />
-            <element signature="e#1614939#1614944#0" expanded="true" />
-            <element signature="e#1616108#1616113#0" expanded="true" />
-            <element signature="e#1619214#1619219#0" expanded="true" />
-            <element signature="e#1619297#1619302#0" expanded="true" />
-            <element signature="e#1627337#1627342#0" expanded="true" />
-            <element signature="e#1695057#1695062#0" expanded="true" />
-            <element signature="e#1704375#1704380#0" expanded="true" />
-            <element signature="e#1718661#1718666#0" expanded="true" />
-            <element signature="e#1720117#1720122#0" expanded="true" />
-            <element signature="e#1722056#1722061#0" expanded="true" />
-            <element signature="e#1729006#1729011#0" expanded="true" />
-            <element signature="e#1735901#1735906#0" expanded="true" />
-            <element signature="e#1760926#1760931#0" expanded="true" />
-            <element signature="e#1774106#1774111#0" expanded="true" />
-            <element signature="e#1784042#1784047#0" expanded="true" />
-            <element signature="e#1784052#1784057#0" expanded="true" />
-            <element signature="e#1792191#1792196#0" expanded="true" />
-            <element signature="e#1832448#1832453#0" expanded="true" />
-            <element signature="e#1842043#1842048#0" expanded="true" />
-            <element signature="e#1842191#1842196#0" expanded="true" />
-            <element signature="e#1848292#1848297#0" expanded="true" />
-            <element signature="e#1850097#1850102#0" expanded="true" />
-            <element signature="e#1865960#1865965#0" expanded="true" />
-            <element signature="e#1873986#1873991#0" expanded="true" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/tmp.html" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="364">
+            <caret line="14" selection-start-line="14" selection-end-line="15" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
@@ -516,10 +325,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/neo/neo/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="56" column="1" lean-forward="true" selection-start-line="56" selection-start-column="1" selection-end-line="56" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neo/neo/spiders/betalist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="57" selection-start-line="57" selection-end-line="61" selection-end-column="9" />
+          <folding>
+            <element signature="e#24#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/neo/neo/spiders/startups-list.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        <state relative-caret-position="338">
+          <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
           <folding>
             <element signature="e#24#33#0" expanded="true" />
           </folding>
@@ -528,41 +354,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/neo/neo/spiders/startupranking.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        <state relative-caret-position="806">
+          <caret line="57" column="1" selection-start-line="57" selection-start-column="1" selection-end-line="61" selection-end-column="13" />
           <folding>
             <element signature="e#24#33#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/neo/neo/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1768">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/neo/neo/spiders/betalist.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="21" column="20" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="20" />
-          <folding>
-            <element signature="e#24#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="364">
-            <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>

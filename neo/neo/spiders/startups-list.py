@@ -71,13 +71,11 @@ class StartupListSpider(scrapy.Spider):
                 'description': startup_description,
                 'data': data,
             }
-            print('#' * 100)
-            print(item_data)
-            # yield scrapy.Request(
-            #     url=response.urljoin(website),
-            #     callback=self.extract_startup_url,
-            #     meta={'item_data': item_data, 'logo': startup_logo}
-            # )
+            yield scrapy.Request(
+                url=response.urljoin(website),
+                callback=self.extract_startup_url,
+                meta={'item_data': item_data, 'logo': startup_logo}
+            )
 
     def extract_startup_url(self, response):
         item_data = response.meta['item_data']
