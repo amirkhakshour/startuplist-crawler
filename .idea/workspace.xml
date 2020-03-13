@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="05730736-5f5a-4e51-8efe-f575332f9f07" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/neo/neo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/neo/neo/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neo/neo/spiders/startupranking.py" beforeDir="false" afterPath="$PROJECT_DIR$/neo/neo/spiders/startupranking.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neo/neo/spiders/startups-list.py" beforeDir="false" afterPath="$PROJECT_DIR$/neo/neo/spiders/startups-list.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/neo/neo/spiders/startupranking.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="806">
-              <caret line="57" column="1" selection-start-line="57" selection-start-column="1" selection-end-line="61" selection-end-column="13" />
+            <state relative-caret-position="390">
+              <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
               <folding>
                 <element signature="e#24#33#0" expanded="true" />
               </folding>
@@ -78,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/neo/neo/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="56" column="1" lean-forward="true" selection-start-line="56" selection-start-column="1" selection-end-line="56" selection-end-column="1" />
+            <state relative-caret-position="303">
+              <caret line="31" column="33" lean-forward="true" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -91,14 +88,12 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>get_emails</find>
       <find>return</find>
       <find>RabbitMQItemPublisherPipeline</find>
       <find>exchange</find>
       <find>text</find>
       <find>region</find>
       <find>startup_name</find>
-      <find>ITEM_PIPELINES</find>
       <find>startup_cards</find>
       <find>main_link</find>
       <find>image</find>
@@ -115,12 +110,14 @@
       <find>ance</find>
       <find>DOWNLOADER_MIDDLEWARES</find>
       <find>extract_data_from_page</find>
-      <find>delay</find>
       <find>print</find>
       <find>break</find>
-      <find>extract_startup_ref_page</find>
       <find>pager</find>
       <find>website</find>
+      <find>ITEM_PIPELINES</find>
+      <find>dela</find>
+      <find>delay</find>
+      <find>extract_startup_ref_page</find>
     </findStrings>
     <replaceStrings>
       <replace>city</replace>
@@ -138,9 +135,9 @@
         <option value="$PROJECT_DIR$/neo/neo/items.py" />
         <option value="$PROJECT_DIR$/neo/neo/spiders/betalist.py" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/neo/neo/settings.py" />
         <option value="$PROJECT_DIR$/neo/neo/spiders/startups-list.py" />
         <option value="$PROJECT_DIR$/neo/neo/spiders/startupranking.py" />
+        <option value="$PROJECT_DIR$/neo/neo/settings.py" />
       </list>
     </option>
   </component>
@@ -187,12 +184,12 @@
       <option name="presentableId" value="Default" />
       <updated>1583606136300</updated>
       <workItem from="1583606146034" duration="25573000" />
-      <workItem from="1584027631058" duration="7950000" />
+      <workItem from="1584027631058" duration="11727000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53897000" />
+    <option name="totallyTimeSpent" value="57674000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
@@ -318,20 +315,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/neo/neo/items.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="28" column="18" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/neo/neo/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="56" column="1" lean-forward="true" selection-start-line="56" selection-start-column="1" selection-end-line="56" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/neo/neo/spiders/betalist.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -352,13 +335,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/neo/neo/items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="28" column="18" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/neo/neo/spiders/startupranking.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="806">
-          <caret line="57" column="1" selection-start-line="57" selection-start-column="1" selection-end-line="61" selection-end-column="13" />
+        <state relative-caret-position="390">
+          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
           <folding>
             <element signature="e#24#33#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neo/neo/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="31" column="33" lean-forward="true" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
         </state>
       </provider>
     </entry>
