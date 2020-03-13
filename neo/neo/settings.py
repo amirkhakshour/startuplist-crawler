@@ -101,7 +101,7 @@ RABBITMQ_RESULT_VHOST = os.environ.get('RABBITMQ_RESULT_VHOST', '3meg')
 RABBITMQ_RESULT_EXCHANGE = os.environ.get('RABBITMQ_RESULT_EXCHANGE', 'scrapy')
 RABBITMQ_RESULT_QUEUE = os.environ.get('RABBITMQ_RESULT_QUEUE', 'startups')
 RABBITMQ_RESULT_ROUTING_KEY = os.environ.get('RABBITMQ_RESULT_ROUTING_KEY', 'startups')
-RABBITMQ_RESULT_URL = 'amqp://{user}:{passwd}@{host}:{port}/{vhost}'.format(
+RABBITMQ_RESULT_URI = 'amqp://{user}:{passwd}@{host}:{port}/{vhost}'.format(
     user=RABBITMQ_RESULT_USER,
     passwd=RABBITMQ_RESULT_PASSWORD,
     host=RABBITMQ_RESULT_HOST,
@@ -117,14 +117,13 @@ RABBITMQ_FETCH_VIRTUAL_HOST = os.environ.get('RABBITMQ_FETCH_VIRTUAL_HOST', '3me
 RABBITMQ_FETCH_EXCHANGE = os.environ.get('RABBITMQ_FETCH_EXCHANGE', 'scrapy')
 RABBITMQ_FETCH_QUEUE = os.environ.get('RABBITMQ_FETCH_QUEUE', 'fetcher')
 RABBITMQ_FETCH_ROUTING_KEY = os.environ.get('RABBITMQ_FETCH_ROUTING_KEY', 'startups')
-RABBITMQ_FETCHER_PARAMETERS = 'amqp://{user}:{passwd}@{host}:{port}/{vhost}'.format(
+RABBITMQ_FETCHER_URI = 'amqp://{user}:{passwd}@{host}:{port}/{vhost}'.format(
     user=RABBITMQ_FETCH_USER,
     passwd=RABBITMQ_FETCH_PASSWORD,
     host=RABBITMQ_FETCH_HOST,
     port=RABBITMQ_FETCH_PORT,
     vhost=RABBITMQ_FETCH_VIRTUAL_HOST
 )
-
 STARTUP_DATA_TYPE_EMAIL = 'E'
 STARTUP_DATA_TYPE_PEOPLE = 'P'
 STARTUP_DATA_TYPE_PHONE = 'H'
@@ -135,3 +134,11 @@ STARTUP_DATA_TYPE_CITY = 'C'
 
 CRAWLERA_ENABLED = True
 CRAWLERA_APIKEY = '4d9b378bdf78449bbef0393efcc5bb20'
+
+
+# Enable RabbitMQ scheduler
+SCHEDULER = "neo.rabbitmqlink.scheduler.RabbitMQScheduler"
+# Middleware acks RabbitMQ message on success
+DOWNLOADER_MIDDLEWARES = {
+    'neo.rabbitmqlink.middleware.RabbitMQMiddleware': 999
+}

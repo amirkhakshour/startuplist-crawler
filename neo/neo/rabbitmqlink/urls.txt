@@ -1,0 +1,1 @@
+https://github.com/mbriliauskas/scrapy-rabbitmq-link

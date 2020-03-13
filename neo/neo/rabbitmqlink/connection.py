@@ -51,6 +51,7 @@ class RabbitMQConnection(object):
                                 queue=self.queue_name)
 
     def close(self):
+        print("Closing RabbitMQ connection.")
         self.channel.close()
         self.connection.close()
 
@@ -64,8 +65,8 @@ class RabbitMQConnection(object):
                     return func(self, *args, **kwargs)
                 except Exception as e:
                     retries += 1
-                    msg = 'func %s failed. Reconnecting... (%d times)' % \
-                          (str(func), retries)
+                    msg = 'func %s failed. Reconnecting... (%d times). \n message: %s' % \
+                          (str(func), retries, str(e))
                     logger.info(msg)
                     self.connect()
                     time.sleep((retries - 1) * 5)
@@ -74,9 +75,9 @@ class RabbitMQConnection(object):
         return wrapper
 
     @_try_operation
-    def retrieve(self, no_ack=False):
+    def retrieve(self, auto_ack=False):
         """Pop a message"""
-        return self.channel.basic_get(queue=self.queue_name, no_ack=no_ack)
+        return self.channel.basic_get(queue=self.queue_name, auto_ack=auto_ack)
 
     @_try_operation
     def publish(self, body, headers=None):
@@ -110,18 +111,6 @@ class RabbitMQConnection(object):
         """Ack a message"""
         self.channel.basic_ack(delivery_tag=delivery_tag)
 
-
-def get_channel(connection, queue_name):
-    """ Init method to return a prepared channel for consuming
-    """
-    channel = connection.channel()
-    channel.queue_declare(queue=queue_name, durable=True)
-    channel.confirm_delivery()
-
-    return channel
-
-
-def connect(connection_url):
-    """ Create and return a fresh connection
-    """
-    return pika.BlockingConnection(pika.URLParameters(connection_url))
+    def clear(self):
+        """Clear queue/stack"""
+        self.channel.queue_purge(self.key)

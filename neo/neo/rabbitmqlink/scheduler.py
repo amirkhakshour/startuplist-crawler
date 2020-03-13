@@ -1,12 +1,8 @@
-import sys
 import time
 import signal
 import logging
 
-from scrapy.http import Request
-from scrapy.dupefilters import BaseDupeFilter
-from rabbitmqlink import connection
-from rabbitmqlink.queue import RabbitQueue
+from neo.rabbitmqlink.connection import RabbitMQConnection
 
 logger = logging.getLogger(__name__)
 
@@ -47,26 +43,24 @@ class Scheduler(IScheduler):
             raise ValueError(msg)
 
 
-repo_url = 'https://github.com/mbriliauskas/scrapy-rabbitmq-link'
-
-
 class RabbitMQScheduler(Scheduler):
     """ A RabbitMQ Scheduler for Scrapy. """
     queue = None
     stats = None
 
-    def __init__(self, connection_url, *args, **kwargs):
+    def __init__(self, connection_url, exchange_name, *args, **kwargs):
         self.connection_url = connection_url
+        self.exchange_name = exchange_name
         self.waiting = False
         self.closing = False
-        persist = True
-        idle_before_close = 0
 
     @classmethod
     def from_settings(cls, settings):
-        cls._ensure_settings(settings, 'RABBITMQ_FETCHER_PARAMETERS')
-        connection_url = settings.get('RABBITMQ_FETCHER_PARAMETERS')
-        return cls(connection_url)
+        cls._ensure_settings(settings, 'RABBITMQ_FETCHER_URI')
+        cls._ensure_settings(settings, 'RABBITMQ_FETCH_EXCHANGE')
+        connection_url = settings.get('RABBITMQ_FETCHER_URI')
+        exchange_name = settings.get('RABBITMQ_FETCH_EXCHANGE')
+        return cls(connection_url, exchange_name)
 
     @classmethod
     def from_crawler(cls, crawler):
@@ -82,16 +76,18 @@ class RabbitMQScheduler(Scheduler):
         if not hasattr(spider, '_make_request'):
             msg = 'Method _make_request not found in spider. '
             msg += 'Please add it to spider or see manual at '
-            msg += repo_url
             raise NotImplementedError(msg)
 
-        if not hasattr(spider, 'amqp_key'):
-            msg = 'Please set amqp_key parameter to spider. '
-            msg += 'Consult manual at ' + repo_url
+        if not hasattr(spider, 'amqp_queue_name'):
+            msg = 'Please set amqp_queue_name parameter to spider. '
+            raise ValueError(msg)
+
+        if not hasattr(spider, 'amqp_routing_key'):
+            msg = 'Please set amqp_routing_key parameter to spider. '
             raise ValueError(msg)
 
         self.spider = spider
-        self.queue = self._make_queue(spider.amqp_key)
+        self.queue = self.get_connection_queue(spider.amqp_queue_name, spider.amqp_routing_key)
 
         msg_count = len(self.queue)
         if msg_count:
@@ -99,20 +95,19 @@ class RabbitMQScheduler(Scheduler):
                         .format(msg_count))
         else:
             logger.info('No items to crawl in {}'
-                        .format(self.queue.key))
+                        .format(self.queue.queue_name))
 
-    def _make_queue(self, key):
-        return RabbitQueue(self.connection_url, key)
+    def get_connection_queue(self, queue_name, routing_key):
+        return RabbitMQConnection(self.connection_url,
+                                  exchange_name=self.exchange_name,
+                                  queue_name=queue_name,
+                                  routing_key=routing_key)
 
     def on_sigint(self, signal, frame):
         self.closing = True
 
     def close(self, reason):
-        try:
-            self.queue.close()
-            self.fwd_queue.close()
-        except:
-            pass
+        self.queue.close()
 
     def enqueue_request(self, request):
         """ Enqueues request to main queues back
@@ -121,7 +116,7 @@ class RabbitMQScheduler(Scheduler):
             if self.stats:
                 self.stats.inc_value('scheduler/enqueued/rabbitmq',
                                      spider=self.spider)
-            self.queue.push(request.url)
+            self.queue.publish(request.url)
         return True
 
     def next_request(self):
@@ -130,7 +125,7 @@ class RabbitMQScheduler(Scheduler):
         if self.closing:
             return
 
-        mframe, hframe, body = self.queue.pop()
+        mframe, hframe, body = self.queue.retrieve()
         if any([mframe, hframe, body]):
             self.waiting = False
 
@@ -146,23 +141,15 @@ class RabbitMQScheduler(Scheduler):
             if not self.waiting:
                 msg = 'Queue {} is empty. Waiting for messages...'
                 self.waiting = True
-                logger.info(msg.format(self.queue.key))
+                logger.info(msg.format(self.queue.queue_name))
             time.sleep(10)
             return None
 
     def has_pending_requests(self):
         return not self.closing
 
-
-class SaaS(RabbitMQScheduler):
-    """ Scheduler as a RabbitMQ service.
-    """
-
-    def __init__(self, connection_url, *args, **kwargs):
-        super(SaaS, self).__init__(connection_url, *args, **kwargs)
-
     def ack_message(self, delivery_tag):
         self.queue.ack(delivery_tag)
 
     def requeue_message(self, body, headers=None):
-        self.queue.push(body, headers)
+        self.queue.publish(body, headers)

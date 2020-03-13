@@ -12,7 +12,7 @@ class RabbitMQItemPublisherPipeline(object):
     @classmethod
     def from_crawler(cls, crawler):
         return cls(
-            connect_url=crawler.settings.get("RABBITMQ_RESULT_URL"),
+            connect_url=crawler.settings.get("RABBITMQ_RESULT_URI"),
             exchange_name=crawler.settings.get("RABBITMQ_RESULT_EXCHANGE"),
             routing_key=crawler.settings.get("RABBITMQ_RESULT_ROUTING_KEY"),
             queue_name=crawler.settings.get("RABBITMQ_RESULT_QUEUE"),

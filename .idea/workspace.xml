@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="05730736-5f5a-4e51-8efe-f575332f9f07" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/neo/neo/rabbitmqlink/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/neo/neo/rabbitmqlink/urls.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/neo/neo/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/neo/neo/pipelines.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/neo/neo/rabbitmqlink/connection.py" beforeDir="false" afterPath="$PROJECT_DIR$/neo/neo/rabbitmqlink/connection.py" afterDir="false" />
@@ -36,10 +38,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/neo/neo/rabbitmqlink/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="78">
+              <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/neo/neo/rabbitmqlink/middleware.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1430">
-              <caret line="58" column="32" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
+            <state relative-caret-position="-1508">
+              <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -48,39 +59,32 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/neo/neo/middlewares.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/neo/neo/rabbitmqlink/scheduler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="93" column="37" selection-start-line="93" selection-start-column="26" selection-end-line="93" selection-end-column="37" />
+            <state relative-caret-position="910">
+              <caret line="154" lean-forward="true" selection-start-line="154" selection-end-line="154" />
               <folding>
-                <element signature="e#0#10#0" expanded="true" />
+                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#350#375#0" />
+                <element signature="e#413#469#0" />
+                <element signature="e#613#673#0" />
+                <element signature="e#711#764#0" />
+                <element signature="e#810#877#0" />
+                <element signature="e#1051#1133#0" />
+                <element signature="e#2674#2769#0" />
+                <element signature="e#2796#2882#0" />
+                <element signature="e#3845#3953#0" />
+                <element signature="e#4244#4386#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/neo/neo/rabbitmqlink/queue.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="96" selection-start-line="96" selection-end-line="97" selection-end-column="33" />
-              <folding>
-                <element signature="e#18#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/neo/neo/rabbitmqlink/connection.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2054">
-              <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
+            <state relative-caret-position="407">
+              <caret line="72" column="36" lean-forward="true" selection-start-line="72" selection-start-column="36" selection-end-line="72" selection-end-column="36" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -91,8 +95,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/neo/neo/spiders/explorer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="4" column="9" lean-forward="true" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+            <state relative-caret-position="156">
+              <caret line="6" column="37" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -100,17 +104,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/neo/neo/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1192">
-              <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/neo/neo/pipelines.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="26">
-              <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+            <state relative-caret-position="312">
+              <caret line="142" column="51" selection-start-line="142" selection-start-column="33" selection-end-line="142" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -119,36 +114,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ITEM_PIPELINES</find>
-      <find>dela</find>
-      <find>delay</find>
-      <find>extract_startup_ref_page</find>
-      <find>down</find>
-      <find>pager</find>
-      <find>F</find>
-      <find>DOWNLOADER_MIDDLEWARES</find>
-      <find>_get_mwlist_from_settings</find>
-      <find>DownloaderMiddlewareManager</find>
-      <find>repo_url</find>
-      <find>RABBITMQ_HOST</find>
-      <find>RABBITMQ_</find>
-      <find>RABBITMQ_CONNECTION_PARAMETERS</find>
-      <find>_make_request</find>
       <find>connection</find>
       <find>function</find>
       <find>BlockingConnection</find>
       <find>connect</find>
-      <find>ack</find>
-      <find>key</find>
       <find>RabbitQueue</find>
-      <find>_make_queue</find>
       <find>queue_declare</find>
       <find>RabbitMQQueue</find>
       <find>RabbitMQItemPublisherPipeline</find>
       <find>encoder</find>
-      <find>get_channel</find>
       <find>RABBITMQ_ITEM</find>
+      <find>_make_queue</find>
+      <find>RABBITMQ_FETCHER_PARAMETERS</find>
+      <find>RABBITMQ_RESULT_URL</find>
+      <find>RabbitMQScheduler</find>
+      <find>get_channel</find>
+      <find>ack_message</find>
+      <find>key</find>
+      <find>repo</find>
+      <find>queue</find>
+      <find>self.queue</find>
+      <find>def close</find>
+      <find>fwd_queue</find>
+      <find>queue_key</find>
       <find>parameters</find>
+      <find>DOWNLOADER_MIDDLEWARES</find>
+      <find>RabbitMQMiddleware</find>
+      <find>closing</find>
+      <find>no_ack</find>
+      <find>retrieve</find>
+      <find>ack</find>
     </findStrings>
     <replaceStrings>
       <replace>city</replace>
@@ -157,9 +152,11 @@
       <replace>RABBITMQ_FETCH</replace>
       <replace>RABBITMQ_FETCHER_PARAMETERS</replace>
       <replace>queue_name</replace>
+      <replace>RABBITMQ_FETCHER_URI</replace>
+      <replace>RABBITMQ_RESULT_URI</replace>
       <replace>RabbitQueue</replace>
-      <replace>RABBITMQ_RESULT</replace>
       <replace>func</replace>
+      <replace>RABBITMQ_RESULT</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/../env</dir>
@@ -178,12 +175,14 @@
         <option value="$PROJECT_DIR$/neo/neo/spiders/startups-list.py" />
         <option value="$PROJECT_DIR$/neo/neo/spiders/startupranking.py" />
         <option value="$PROJECT_DIR$/neo/neo/rabbitmqlink/middleware.py" />
-        <option value="$PROJECT_DIR$/neo/neo/spiders/explorer.py" />
+        <option value="$PROJECT_DIR$/neo/neo/pipelines.py" />
         <option value="$PROJECT_DIR$/neo/neo/rabbitmqlink/queue.py" />
+        <option value="$PROJECT_DIR$/neo/neo/spiders/explorer.py" />
+        <option value="$PROJECT_DIR$/neo/neo/rabbitmqlink/urls.txt" />
+        <option value="$PROJECT_DIR$/neo/neo/rabbitmqlink/test.py" />
+        <option value="$PROJECT_DIR$/neo/neo/settings.py" />
         <option value="$PROJECT_DIR$/neo/neo/rabbitmqlink/scheduler.py" />
         <option value="$PROJECT_DIR$/neo/neo/rabbitmqlink/connection.py" />
-        <option value="$PROJECT_DIR$/neo/neo/settings.py" />
-        <option value="$PROJECT_DIR$/neo/neo/pipelines.py" />
       </list>
     </option>
   </component>
@@ -230,12 +229,12 @@
       <option name="presentableId" value="Default" />
       <updated>1583606136300</updated>
       <workItem from="1583606146034" duration="25573000" />
-      <workItem from="1584027631058" duration="18060000" />
+      <workItem from="1584027631058" duration="22990000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64007000" />
+    <option name="totallyTimeSpent" value="68937000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
@@ -392,6 +391,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/neo/neo/spiders/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="4" lean-forward="true" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../env/lib/python3.7/site-packages/scrapy/http/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neo/neo/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="1" selection-start-line="1" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/neo/neo/spiders/betalist.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -402,80 +418,91 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/neo/neo/spiders/__init__.py">
+    <entry file="file://$PROJECT_DIR$/neo/neo/rabbitmqlink/queue.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neo/neo/rabbitmqlink/urls.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" lean-forward="true" selection-end-line="4" />
+        <state>
+          <caret column="52" selection-start-column="52" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neo/neo/spiders/explorer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="6" column="37" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/neo/neo/rabbitmqlink/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../env/lib/python3.7/site-packages/scrapy/http/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/neo/neo/rabbitmqlink/scheduler.py">
+    <entry file="file://$PROJECT_DIR$/../env/lib/python3.7/site-packages/pika/spec.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="93" column="37" selection-start-line="93" selection-start-column="26" selection-end-line="93" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="244">
+          <caret line="2078" column="41" selection-start-line="2078" selection-start-column="41" selection-end-line="2078" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/neo/neo/rabbitmqlink/middleware.py">
+    <entry file="file://$PROJECT_DIR$/neo/neo/rabbitmqlink/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1430">
-          <caret line="58" column="32" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/neo/neo/middlewares.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/neo/neo/rabbitmqlink/queue.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="96" selection-start-line="96" selection-end-line="97" selection-end-column="33" />
-          <folding>
-            <element signature="e#18#28#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="78">
+          <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/neo/neo/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1192">
-          <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
+        <state relative-caret-position="312">
+          <caret line="142" column="51" selection-start-line="142" selection-start-column="33" selection-end-line="142" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/neo/neo/spiders/explorer.py">
+    <entry file="file://$PROJECT_DIR$/neo/neo/middlewares.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" column="9" lean-forward="true" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+        <state relative-caret-position="282">
+          <caret line="75" column="53" selection-start-line="75" selection-start-column="53" selection-end-line="75" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/neo/neo/rabbitmqlink/connection.py">
+    <entry file="file://$PROJECT_DIR$/neo/neo/rabbitmqlink/middleware.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2054">
-          <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
+        <state relative-caret-position="-1508">
+          <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/neo/neo/pipelines.py">
+    <entry file="file://$PROJECT_DIR$/neo/neo/rabbitmqlink/scheduler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+        <state relative-caret-position="910">
+          <caret line="154" lean-forward="true" selection-start-line="154" selection-end-line="154" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#350#375#0" />
+            <element signature="e#413#469#0" />
+            <element signature="e#613#673#0" />
+            <element signature="e#711#764#0" />
+            <element signature="e#810#877#0" />
+            <element signature="e#1051#1133#0" />
+            <element signature="e#2674#2769#0" />
+            <element signature="e#2796#2882#0" />
+            <element signature="e#3845#3953#0" />
+            <element signature="e#4244#4386#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neo/neo/rabbitmqlink/connection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="72" column="36" lean-forward="true" selection-start-line="72" selection-start-column="36" selection-end-line="72" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -4,6 +4,8 @@ import scrapy
 
 class ExplorerSpider(scrapy.Spider):
     name = 'explorer'
+    amqp_queue_name = 'scrapy_fetcher'
+    amqp_routing_key = 'fetch.logo'
 
     def _make_request(self, mframe, hframe, body):
         url = body.decode()
