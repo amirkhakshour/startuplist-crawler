@@ -7,6 +7,9 @@ from neo.utils import email_regex, INNER_PAGES_ULR
 
 class StartupListSpider(scrapy.Spider):
     name = 'startuplist'
+
+    # amqp result details
+    amqp_result_routing_key = 'startup.base'
     start_urls = ['https://startups-list.com/']
 
     def get_emails_from_response(self, response):

@@ -19,6 +19,12 @@ class StartupItem(scrapy.Item):
     data = scrapy.Field()
 
 
+class StartupItemUpdate(scrapy.Item):
+    model = scrapy.Field()
+    website = scrapy.Field()
+    data = scrapy.Field()
+
+
 class StartupDataItem(scrapy.Item):
     model = scrapy.Field()
     website = scrapy.Field()

@@ -1,37 +1,20 @@
 # -*- coding: utf-8 -*-
-import re
 import scrapy
 from neo.items import StartupItem, StartupDataItem
-
-email_regex = re.compile((r"([a-z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+\/=?^_`"
-                          "{|}~-]+)*(@|\sat\s)(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?(\.|"
-                          "\sdot\s))+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)"))
-INNER_PAGES_ULR = {
-    'contact',
-    'contact-us',
-    'contactus',
-    'about',
-    'about-us',
-    'impressum',
-    'imprint',
-    'privacy',
-}
+from neo.utils import INNER_PAGES_ULR
+from . import ExplorerSpiderMixin
 
 
-class BetalistSpider(scrapy.Spider):
+class BetalistSpider(ExplorerSpiderMixin, scrapy.Spider):
     name = 'betalist'
+
+    # amqp result details
+    amqp_result_routing_key = 'startup.base'
+
     start_urls = ['https://betalist.com/regions/']
 
     def __init__(self, **kwargs):
         super(BetalistSpider, self).__init__(**kwargs)
-
-    def get_emails_from_response(self, response):
-        text = response.body.decode('utf-8')
-        """Returns an iterator of matched emails found in string s."""
-        # Removing lines that start with '//' because the regular expression
-        # mistakenly matches patterns like 'http://foo@bar.com' as '//foo@bar.com'.
-        return set([email[0] for email in re.findall(email_regex, text)
-                    if not (email[0].startswith('//') or '/' in email[0])])
 
     def parse(self, response):
         for region in response.xpath("//a[contains(@class, 'tag--card')]"):

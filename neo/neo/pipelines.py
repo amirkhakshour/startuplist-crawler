@@ -23,5 +23,6 @@ class RabbitMQItemPublisherPipeline(object):
 
     def process_item(self, item, spider):
         data = self.encoder.encode(item)
-        self.connection.publish(body=data, headers={'model': item.get('model', None)})
+        self.connection.publish(body=data, headers={'model': item.get('model', None)},
+                                routing_key=spider.get('amqp_result_routing_key', None))
         return item

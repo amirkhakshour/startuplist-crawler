@@ -1,35 +1,17 @@
 # -*- coding: utf-8 -*-
-import re
 import scrapy
-from urllib.parse import urlparse, urljoin
 
 from neo.items import StartupItem, StartupDataItem
-from neo.utils import email_regex, INNER_PAGES_ULR
+from neo.utils import INNER_PAGES_ULR
+from . import ExplorerSpiderMixin
 
 
-class StartupListSpider(scrapy.Spider):
+class StartupListSpider(ExplorerSpiderMixin, scrapy.Spider):
     name = 'startupranking'
+
+    # amqp result details
+    amqp_result_routing_key = 'startup.base'
     start_urls = ['https://www.startupranking.com/countries']
-
-    def clean_text(self, text):  # todo add Open/Closed principle
-        if not text:
-            return
-        return text\
-            .replace('/n', '')\
-            .lower()\
-            .strip()
-
-    def get_base_url(self, url):
-        url = urljoin(url, urlparse(url).path)
-        return url.split('?')[0]
-
-    def get_emails_from_response(self, response):
-        text = response.body.decode('utf-8')
-        """Returns an iterator of matched emails found in string s."""
-        # Removing lines that start with '//' because the regular expression
-        # mistakenly matches patterns like 'http://foo@bar.com' as '//foo@bar.com'.
-        return set([email[0] for email in re.findall(email_regex, text)
-                    if not (email[0].startswith('//') or '/' in email[0])])
 
     def parse(self, response):
         for country in response.xpath("//table[contains(@class, 'table-striped')]/tbody/tr/td[2]/a"):

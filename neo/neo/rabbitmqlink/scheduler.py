@@ -78,16 +78,16 @@ class RabbitMQScheduler(Scheduler):
             msg += 'Please add it to spider or see manual at '
             raise NotImplementedError(msg)
 
-        if not hasattr(spider, 'amqp_queue_name'):
-            msg = 'Please set amqp_queue_name parameter to spider. '
+        if not hasattr(spider, 'amqp_fetcher_queue_name'):
+            msg = 'Please set amqp_fetcher_queue_name parameter to spider. '
             raise ValueError(msg)
 
-        if not hasattr(spider, 'amqp_routing_key'):
-            msg = 'Please set amqp_routing_key parameter to spider. '
+        if not hasattr(spider, 'amqp_fetcher_routing_key'):
+            msg = 'Please set amqp_fetcher_routing_key parameter to spider. '
             raise ValueError(msg)
 
         self.spider = spider
-        self.queue = self.get_connection_queue(spider.amqp_queue_name, spider.amqp_routing_key)
+        self.queue = self.get_connection_queue(spider.amqp_fetcher_queue_name, spider.amqp_fetcher_routing_key)
 
         msg_count = len(self.queue)
         if msg_count:
@@ -142,7 +142,7 @@ class RabbitMQScheduler(Scheduler):
                 msg = 'Queue {} is empty. Waiting for messages...'
                 self.waiting = True
                 logger.info(msg.format(self.queue.queue_name))
-            time.sleep(10)
+            time.sleep(1)
             return None
 
     def has_pending_requests(self):

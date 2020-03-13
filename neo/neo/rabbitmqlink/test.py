@@ -5,13 +5,13 @@ connection = pika.BlockingConnection(pika.URLParameters(RABBITMQ_CONNECTION_PARA
 channel = connection.channel()
 
 # set queue name
-queue_key = 'scrapy_fetcher'
+queue_key = 'fetcher.meta'
 
 # publish links to queue
 with open('urls.txt') as f:
     for url in f:
         url = url.strip(' \n\r')
-        channel.basic_publish(exchange='',
+        channel.basic_publish(exchange='scrapy',
                               routing_key=queue_key,
                               body=url,
                               properties=pika.BasicProperties(

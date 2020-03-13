@@ -3,6 +3,7 @@ import logging
 import time
 
 from pika.exceptions import ChannelWrongStateError
+logging.getLogger("pika").setLevel(logging.WARNING)
 
 logger = logging.getLogger(__name__)
 
@@ -80,7 +81,7 @@ class RabbitMQConnection(object):
         return self.channel.basic_get(queue=self.queue_name, auto_ack=auto_ack)
 
     @_try_operation
-    def publish(self, body, headers=None):
+    def publish(self, body, headers=None, routing_key=None):
         """
         publish a message to bounded queue
         Available options to pass from kwargs to basic_publish:
@@ -94,7 +95,7 @@ class RabbitMQConnection(object):
         try:
             self.channel.basic_publish(
                 exchange=self.exchange_name,
-                routing_key=self.routing_key,
+                routing_key=routing_key or self.routing_key,
                 body=body,
                 properties=properties
             )

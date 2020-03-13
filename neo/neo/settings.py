@@ -19,7 +19,7 @@ NEWSPIDER_MODULE = 'neo.spiders'
 USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 # CONCURRENT_REQUESTS = 32
@@ -99,8 +99,8 @@ RABBITMQ_RESULT_USER = os.environ.get('RABBITMQ_RESULT_USER', 'admin')
 RABBITMQ_RESULT_PASSWORD = os.environ.get('RABBITMQ_RESULT_PASSWORD', 'doogh')
 RABBITMQ_RESULT_VHOST = os.environ.get('RABBITMQ_RESULT_VHOST', '3meg')
 RABBITMQ_RESULT_EXCHANGE = os.environ.get('RABBITMQ_RESULT_EXCHANGE', 'scrapy')
-RABBITMQ_RESULT_QUEUE = os.environ.get('RABBITMQ_RESULT_QUEUE', 'startups')
-RABBITMQ_RESULT_ROUTING_KEY = os.environ.get('RABBITMQ_RESULT_ROUTING_KEY', 'startups')
+RABBITMQ_RESULT_QUEUE = os.environ.get('RABBITMQ_RESULT_QUEUE', 'startup')  # no need
+RABBITMQ_RESULT_ROUTING_KEY = os.environ.get('RABBITMQ_RESULT_ROUTING_KEY', 'startup.*')
 RABBITMQ_RESULT_URI = 'amqp://{user}:{passwd}@{host}:{port}/{vhost}'.format(
     user=RABBITMQ_RESULT_USER,
     passwd=RABBITMQ_RESULT_PASSWORD,
@@ -116,7 +116,7 @@ RABBITMQ_FETCH_PASSWORD = os.environ.get('RABBITMQ_FETCH_PASSWORD', 'doogh')
 RABBITMQ_FETCH_VIRTUAL_HOST = os.environ.get('RABBITMQ_FETCH_VIRTUAL_HOST', '3meg')
 RABBITMQ_FETCH_EXCHANGE = os.environ.get('RABBITMQ_FETCH_EXCHANGE', 'scrapy')
 RABBITMQ_FETCH_QUEUE = os.environ.get('RABBITMQ_FETCH_QUEUE', 'fetcher')
-RABBITMQ_FETCH_ROUTING_KEY = os.environ.get('RABBITMQ_FETCH_ROUTING_KEY', 'startups')
+RABBITMQ_FETCH_ROUTING_KEY = os.environ.get('RABBITMQ_FETCH_ROUTING_KEY', 'fetcher.*')
 RABBITMQ_FETCHER_URI = 'amqp://{user}:{passwd}@{host}:{port}/{vhost}'.format(
     user=RABBITMQ_FETCH_USER,
     passwd=RABBITMQ_FETCH_PASSWORD,
