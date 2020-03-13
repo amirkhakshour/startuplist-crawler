@@ -5,7 +5,9 @@ import pika
 import logging
 
 # module packages
-from scrapy_rabbitmq_link import connection
+from rabbitmqlink import connection
+
+__all__ = ['RabbitQueue']
 
 logger = logging.getLogger(__name__)
 
@@ -34,7 +36,7 @@ class IQueue(object):
         raise NotImplementedError
 
 
-class RabbitMQQueue(IQueue):
+class RabbitQueue(IQueue):
     """Per-spider FIFO queue"""
 
     def __init__(self, connection_url, key, exchange=None):
@@ -113,6 +115,3 @@ class RabbitMQQueue(IQueue):
     def clear(self):
         """Clear queue/stack"""
         self.channel.queue_purge(self.key)
-
-
-__all__ = ['SpiderQueue']

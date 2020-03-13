@@ -6,7 +6,7 @@ import logging
 from scrapy.http import Request
 from scrapy.dupefilters import BaseDupeFilter
 from rabbitmqlink import connection
-from rabbitmqlink.queue import RabbitMQQueue
+from rabbitmqlink.queue import RabbitQueue
 
 logger = logging.getLogger(__name__)
 
@@ -64,8 +64,8 @@ class RabbitMQScheduler(Scheduler):
 
     @classmethod
     def from_settings(cls, settings):
-        cls._ensure_settings(settings, 'RABBITMQ_CONNECTION_PARAMETERS')
-        connection_url = settings.get('RABBITMQ_CONNECTION_PARAMETERS')
+        cls._ensure_settings(settings, 'RABBITMQ_FETCHER_PARAMETERS')
+        connection_url = settings.get('RABBITMQ_FETCHER_PARAMETERS')
         return cls(connection_url)
 
     @classmethod
@@ -102,7 +102,7 @@ class RabbitMQScheduler(Scheduler):
                         .format(self.queue.key))
 
     def _make_queue(self, key):
-        return RabbitMQQueue(self.connection_url, key)
+        return RabbitQueue(self.connection_url, key)
 
     def on_sigint(self, signal, frame):
         self.closing = True

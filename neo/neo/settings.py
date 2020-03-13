@@ -93,14 +93,37 @@ ITEM_PIPELINES = {
     'neo.pipelines.RabbitMQItemPublisherPipeline': 300,
 }
 
-RABBITMQ_HOST = os.environ.get('RABBITMQ_HOST', 'localhost')
-RABBITMQ_PORT = os.environ.get('RABBITMQ_PORT', 55672)
-RABBITMQ_USER = os.environ.get('RABBITMQ_USER', 'admin')
-RABBITMQ_PASSWORD = os.environ.get('RABBITMQ_PASSWORD', 'doogh')
-RABBITMQ_VIRTUAL_HOST = os.environ.get('RABBITMQ_VIRTUAL_HOST', '3meg')
-RABBITMQ_EXCHANGE = os.environ.get('RABBITMQ_EXCHANGE', 'scrapy')
-RABBITMQ_QUEUE = os.environ.get('RABBITMQ_QUEUE', 'startups')
-RABBITMQ_ROUTING_KEY = os.environ.get('RABBITMQ_ROUTING_KEY', 'startups')
+RABBITMQ_RESULT_HOST = os.environ.get('RABBITMQ_RESULT_HOST', 'localhost')
+RABBITMQ_RESULT_PORT = os.environ.get('RABBITMQ_RESULT_PORT', 55672)
+RABBITMQ_RESULT_USER = os.environ.get('RABBITMQ_RESULT_USER', 'admin')
+RABBITMQ_RESULT_PASSWORD = os.environ.get('RABBITMQ_RESULT_PASSWORD', 'doogh')
+RABBITMQ_RESULT_VHOST = os.environ.get('RABBITMQ_RESULT_VHOST', '3meg')
+RABBITMQ_RESULT_EXCHANGE = os.environ.get('RABBITMQ_RESULT_EXCHANGE', 'scrapy')
+RABBITMQ_RESULT_QUEUE = os.environ.get('RABBITMQ_RESULT_QUEUE', 'startups')
+RABBITMQ_RESULT_ROUTING_KEY = os.environ.get('RABBITMQ_RESULT_ROUTING_KEY', 'startups')
+RABBITMQ_RESULT_URL = 'amqp://{user}:{passwd}@{host}:{port}/{vhost}'.format(
+    user=RABBITMQ_RESULT_USER,
+    passwd=RABBITMQ_RESULT_PASSWORD,
+    host=RABBITMQ_RESULT_HOST,
+    port=RABBITMQ_RESULT_PORT,
+    vhost=RABBITMQ_RESULT_VHOST
+)
+
+RABBITMQ_FETCH_HOST = os.environ.get('RABBITMQ_FETCH_HOST', 'localhost')
+RABBITMQ_FETCH_PORT = os.environ.get('RABBITMQ_FETCH_PORT', 55672)
+RABBITMQ_FETCH_USER = os.environ.get('RABBITMQ_FETCH_USER', 'admin')
+RABBITMQ_FETCH_PASSWORD = os.environ.get('RABBITMQ_FETCH_PASSWORD', 'doogh')
+RABBITMQ_FETCH_VIRTUAL_HOST = os.environ.get('RABBITMQ_FETCH_VIRTUAL_HOST', '3meg')
+RABBITMQ_FETCH_EXCHANGE = os.environ.get('RABBITMQ_FETCH_EXCHANGE', 'scrapy')
+RABBITMQ_FETCH_QUEUE = os.environ.get('RABBITMQ_FETCH_QUEUE', 'fetcher')
+RABBITMQ_FETCH_ROUTING_KEY = os.environ.get('RABBITMQ_FETCH_ROUTING_KEY', 'startups')
+RABBITMQ_FETCHER_PARAMETERS = 'amqp://{user}:{passwd}@{host}:{port}/{vhost}'.format(
+    user=RABBITMQ_FETCH_USER,
+    passwd=RABBITMQ_FETCH_PASSWORD,
+    host=RABBITMQ_FETCH_HOST,
+    port=RABBITMQ_FETCH_PORT,
+    vhost=RABBITMQ_FETCH_VIRTUAL_HOST
+)
 
 STARTUP_DATA_TYPE_EMAIL = 'E'
 STARTUP_DATA_TYPE_PEOPLE = 'P'
