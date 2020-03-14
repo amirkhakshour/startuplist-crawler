@@ -3,11 +3,12 @@ import logging
 import time
 
 from pika.exceptions import ChannelWrongStateError
+
 logging.getLogger("pika").setLevel(logging.WARNING)
 
 logger = logging.getLogger(__name__)
 
-DEFAULT_RABBITMQ_EXCHANGE_TYPE = 'direct'
+DEFAULT_RABBITMQ_EXCHANGE_TYPE = 'topic'
 DEFAULT_RABBITMQ_QUEUE = 'scrapy'
 DEFAULT_RABBITMQ_ROUTING_KEY = 'scrapy.items'
 
@@ -92,15 +93,12 @@ class RabbitMQConnection(object):
         properties = None
         if headers:
             properties = pika.BasicProperties(headers=headers)
-        try:
-            self.channel.basic_publish(
-                exchange=self.exchange_name,
-                routing_key=routing_key or self.routing_key,
-                body=body,
-                properties=properties
-            )
-        except ChannelWrongStateError as e:
-            self.connect()
+        self.channel.basic_publish(
+            exchange=self.exchange_name,
+            routing_key=routing_key or self.routing_key,
+            body=body,
+            properties=properties
+        )
 
     def __len__(self):
         """Return the length of the queue"""

@@ -7,11 +7,11 @@ from . import ExplorerSpiderMixin
 class ExplorerSpider(ExplorerSpiderMixin, scrapy.Spider):
     name = 'explorer_meta'
     # fetcher details
-    amqp_fetcher_queue_name = 'scrapy_fetcher'
-    amqp_fetcher_routing_key = 'meta.*'
+    amqp_fetcher_queue_name = 'scrapy_fetch_meta'
+    amqp_fetcher_routing_key = 'meta'
 
     # amqp result details
-    amqp_result_routing_key = 'startup.base'
+    amqp_result_routing_key = 'startup.email'
 
     LOGO_FINDER_PRIORITY = [
         '//meta[@property="og:image"]/@content',
